@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ottmane Benamer — Projets IT</title>
+<meta name="description" content="Projets pratiques en systèmes, réseaux et support IT. Labs documentés : Active Directory, DHCP, routage Cisco, Linux, PostgreSQL.">
+<style>
+  :root{
+    --teal:#1E4F60;
+    --teal-deep:#153B48;
+    --ink:#14181B;
+    --body:#37414A;
+    --faint:#6B7680;
+    --line:#E1E5E9;
+    --paper:#FBFBF9;
+    --card:#FFFFFF;
+    --code-bg:#0E151D;
+    --code-txt:#D6E2EA;
+    --accent:#C88A3A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--paper);
+    color:var(--body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  .topbar{height:5px;background:var(--teal)}
+  header.hero{padding:64px 0 40px}
+  .eyebrow{
+    font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal);margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(30px,7vw,50px);line-height:1.05;color:var(--ink);
+    font-weight:800;letter-spacing:-.02em;margin-bottom:20px;
+  }
+  h1 .light{color:var(--faint);font-weight:600}
+  .lede{font-size:clamp(16px,2.4vw,19px);max-width:620px;color:var(--body)}
+  .lede strong{color:var(--ink);font-weight:600}
+  .idcard{
+    margin-top:32px;background:var(--code-bg);border-radius:10px;
+    padding:20px 22px;font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+    font-size:13.5px;color:var(--code-txt);overflow-x:auto;
+  }
+  .idcard .row{white-space:nowrap}
+  .idcard .k{color:#7FB0C4}
+  .idcard .v{color:#E8EEF2}
+  .idcard .c{color:#5E6B75}
+  .idcard .g{color:#84C08E}
+  .stats{
+    display:flex;flex-wrap:wrap;gap:0;margin-top:34px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .stat{flex:1;min-width:120px;padding:18px 4px}
+  .stat + .stat{border-left:1px solid var(--line)}
+  .stat .n{font-size:26px;font-weight:800;color:var(--teal);line-height:1}
+  .stat .l{font-size:12.5px;color:var(--faint);margin-top:6px}
+  main{padding:20px 0 40px}
+  .theme{padding:38px 0 8px}
+  .theme-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+  .theme-num{
+    font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+    font-size:13px;font-weight:700;color:var(--teal);
+  }
+  .theme-title{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .theme-sub{font-size:14px;color:var(--faint);margin-left:auto;text-align:right}
+  .grid{display:grid;gap:14px}
+  .card{
+    display:block;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:20px 22px;text-decoration:none;color:inherit;
+    transition:border-color .16s ease, transform .16s ease, box-shadow .16s ease;
+    position:relative;
+  }
+  .card:hover{
+    border-color:var(--teal);transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(21,59,72,.10);
+  }
+  .card:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+  .card-top{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+  .card-title{font-size:17px;font-weight:700;color:var(--ink);flex:1}
+  .pdf-tag{
+    font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--teal);
+    border:1px solid var(--line);border-radius:5px;padding:3px 8px;white-space:nowrap;
+  }
+  .card-desc{font-size:14.5px;color:var(--body);margin-bottom:14px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{
+    font-size:11.5px;color:var(--faint);background:#F2F4F5;
+    border-radius:5px;padding:3px 9px;font-weight:500;
+  }
+  .arrow{color:var(--faint);font-size:18px;transition:transform .16s ease,color .16s ease}
+  .card:hover .arrow{transform:translateX(3px);color:var(--teal)}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:34px 0 60px}
+  .foot-row{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+  .foot-name{font-weight:700;color:var(--ink)}
+  .foot-sep{color:var(--line)}
+  .foot-note{font-size:13px;color:var(--faint);margin-top:14px}
+  @media (max-width:560px){
+    header.hero{padding:44px 0 28px}
+    .stat{min-width:33%}
+    .theme-sub{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Portfolio · Systèmes · Réseaux · Support IT</div>
+    <h1>Ottmane Benamer<br><span class="light">projets pratiques, documentés.</span></h1>
+    <p class="lede">
+      Je documente ici mes labs en <strong>systèmes</strong>, <strong>réseaux</strong> et
+      <strong>support IT</strong>. Chaque projet est une fiche : le contexte, la mise en place,
+      le problème rencontré, et la vérification. Pas des captures empilées — un raisonnement.
+    </p>
+
+    <div class="idcard">
+      <div class="row"><span class="c"># profil</span></div>
+      <div class="row"><span class="k">rôle</span><span class="v">        Technicien support · systèmes &amp; réseaux</span></div>
+      <div class="row"><span class="k">formation</span><span class="v">   TSSR (RNCP 5) · Admin. Infrastructures Sécurisées (RNCP 6)</span></div>
+      <div class="row"><span class="k">labs</span><span class="v">        Proxmox · VMware · Packet Tracer · Windows Server · Debian</span></div>
+      <div class="row"><span class="k">statut</span><span class="g">      disponible</span></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">7</div><div class="l">projets documentés</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">domaines couverts</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">testés &amp; vérifiés</div></div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="theme" id="windows">
+      <div class="theme-head">
+        <span class="theme-num">01</span>
+        <span class="theme-title">Windows Server &amp; Active Directory</span>
+        <span class="theme-sub">3 projets</span>
+      </div>
+      <div class="grid">
+
+        <a class="card" href="projet-installation-ad-domaine.pdf">
+          <div class="card-top">
+            <span class="card-title">Installation d'Active Directory &amp; création du domaine</span>
+            <span class="pdf-tag">PDF</span>
+          </div>
+          <p class="card-desc">Promotion d'un serveur vierge en contrôleur de domaine, et création de la forêt RoseLingerie.fr — le socle de tous les autres labs Windows.</p>
+          <div class="card-top" style="margin:0">
+            <div class="chips">
+              <span class="chip">AD DS</span><span class="chip">DNS</span>
+              <span class="chip">Windows Server 2022</span><span class="chip">Contrôleur de domaine</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </a>
+
+        <a class="card" href="projet-script-creation-utilisateurs-ad.pdf">
+          <div class="card-top">
+            <span class="card-title">Création automatisée de comptes AD en PowerShell</span>
+            <span class="pdf-tag">PDF</span>
+          </div>
+          <p class="card-desc">Un script qui lit un CSV et crée 22 comptes d'un coup, avec leurs attributs et l'obligation de changer le mot de passe à la première connexion.</p>
+          <div class="card-top" style="margin:0">
+            <div class="chips">
+              <span class="chip">PowerShell</span><span class="chip">New-ADUser</span>
+              <span class="chip">Import-Csv</span><span class="chip">Automatisation</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </a>
+
+        <a class="card" href="projet-installation-dhcp.pdf">
+          <div class="card-top">
+            <span class="card-title">Installation du rôle DHCP &amp; création de l'étendue</span>
+            <span class="pdf-tag">PDF</span>
+          </div>
+          <p class="card-desc">Distribution automatique des adresses IP sur le domaine, avec exclusions, options et autorisation du serveur dans l'annuaire.</p>
+          <div class="card-top" style="margin:0">
+            <div class="chips">
+              <span class="chip">DHCP</span><span class="chip">Étendue &amp; baux</span>
+              <span class="chip">Exclusions</span><span class="chip">Active Directory</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="theme" id="reseau">
+      <div class="theme-head">
+        <span class="theme-num">02</span>
+        <span class="theme-title">Réseau &amp; Cisco</span>
+        <span class="theme-sub">1 projet</span>
+      </div>
+      <div class="grid">
+
+        <a class="card" href="projet-routage-statique.pdf">
+          <div class="card-top">
+            <span class="card-title">Routage statique entre deux sites distants</span>
+            <span class="pdf-tag">PDF</span>
+          </div>
+          <p class="card-desc">Deux sites sur des réseaux différents, reliés par un lien inter-routeurs. Configuration des routes statiques dans les deux sens, vérifiée au tracert.</p>
+          <div class="card-top" style="margin:0">
+            <div class="chips">
+              <span class="chip">Routage statique</span><span class="chip">Cisco IOS</span>
+              <span class="chip">ip route</span><span class="chip">Packet Tracer</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="theme" id="linux">
+      <div class="theme-head">
+        <span class="theme-num">03</span>
+        <span class="theme-title">Linux &amp; services</span>
+        <span class="theme-sub">3 projets</span>
+      </div>
+      <div class="grid">
+
+        <a class="card" href="projet-wikijs-linux.pdf">
+          <div class="card-top">
+            <span class="card-title">Wiki interne avec Wiki.js sur Debian</span>
+            <span class="pdf-tag">PDF</span>
+          </div>
+          <p class="card-desc">Montage d'une pile applicative complète — Node.js, PostgreSQL, Wiki.js — de A à Z en ligne de commande, puis accès depuis un poste du réseau.</p>
+          <div class="card-top" style="margin:0">
+            <div class="chips">
+              <span class="chip">Wiki.js</span><span class="chip">PostgreSQL</span>
+              <span class="chip">Node.js</span><span class="chip">Debian</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </a>
+
+        <a class="card" href="projet-pihole.pdf">
+          <div class="card-top">
+            <span class="card-title">Filtrage DNS réseau avec Pi-hole</span>
+            <span class="pdf-tag">PDF</span>
+          </div>
+          <p class="card-desc">Blocage des pubs et traceurs sur tous les appareils du réseau, avec le diagnostic des contournements — DNS de la box, DoH des navigateurs, IPv6.</p>
+          <div class="card-top" style="margin:0">
+            <div class="chips">
+              <span class="chip">Pi-hole</span><span class="chip">DNS</span>
+              <span class="chip">Debian</span><span class="chip">Diagnostic réseau</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </a>
+
+        <a class="card" href="projet-mariadb.pdf">
+          <div class="card-top">
+            <span class="card-title">Sauvegarde automatique d'une base MariaDB</span>
+            <span class="pdf-tag">PDF</span>
+          </div>
+          <p class="card-desc">Sauvegarde quotidienne et automatisée d'une base de données sous Linux, avec la correction d'une tâche cron mal configurée.</p>
+          <div class="card-top" style="margin:0">
+            <div class="chips">
+              <span class="chip">MariaDB</span><span class="chip">mysqldump</span>
+              <span class="chip">cron</span><span class="chip">Linux</span>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-row">
+      <span class="foot-name">Ottmane Benamer</span>
+      <span class="foot-sep">·</span>
+      <span>Technicien support · Systèmes &amp; Réseaux</span>
+    </div>
+    <p class="foot-note">
+      Tous les projets sont des labs personnels, montés et testés en environnement virtualisé.
+      Les fiches détaillent chaque étape et sa vérification.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
